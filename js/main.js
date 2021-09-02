@@ -20,7 +20,7 @@ const showSearchResult = data => {
         if (count === 30) {
             return;
         } else {
-            // console.log(element);
+            console.log(element);
             const col = document.createElement('div');
             col.classList.add('col');
             col.innerHTML = `
@@ -31,7 +31,7 @@ const showSearchResult = data => {
                     <h4 class="card-title">${element.title}</h4>
                     <h6 class="card-text">Author: ${element.author_name !== undefined ? element.author_name[0] : "No Author Found"}</h6>
                     <h6 class="card-text">Publisher: ${element.publisher !== undefined ? element.publisher[0] : "No Publisher Found"}</h6>
-                    <h6 class="card-text">Publish Year: ${element.first_publish_year}${element.first_publish_year !== undefined ? element.first_publish_year : "No Publish Year Found"}</h6>
+                    <h6 class="card-text">Publish Year: ${element.first_publish_year !== undefined ? element.first_publish_year : "No Publish Year Found"}</h6>
                 </div >
             </div >
             `;
