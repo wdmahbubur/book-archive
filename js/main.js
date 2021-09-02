@@ -8,14 +8,16 @@ const loadBookData = () => {
 
 const showSearchResult = data => {
     // console.log(data);
+    const searchResultShow = document.getElementById('search-result-show');
+    searchResultShow.innerHTML = '';
+    const numberOfBooks = document.getElementById('number-of-books');
+    numberOfBooks.innerText = `Total ${data.docs.length} Books Found`;
     if (data.docs.length === 0) {
         return alert('No Books Found!');
     }
-    const numberOfBooks = document.getElementById('number-of-books');
-    numberOfBooks.innerText = `Total ${data.docs.length} Books Found`;
+
     let count = 0;
-    const searchResultShow = document.getElementById('search-result-show');
-    searchResultShow.innerHTML = '';
+
     data.docs.forEach(element => {
         if (count === 30) {
             return;
