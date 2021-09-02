@@ -1,7 +1,7 @@
 const loadBookData = () => {
     const searchItem = document.getElementById('search-book');
     // console.log(searchItem.value)
-    fetch(`http://openlibrary.org/search.json?q=${searchItem.value}`)
+    fetch(`https://openlibrary.org/search.json?q=${searchItem.value}`)
         .then(res => res.json())
         .then(data => showSearchResult(data));
 }
